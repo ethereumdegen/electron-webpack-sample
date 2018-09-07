@@ -1,16 +1,25 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 
+const EditorCore = require('./lib/editorcore')
+
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
+async function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow.setMenu(null)
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  //mainWindow.loadFile('public/index.html')
+
+  await EditorCore.init()
+
+  mainWindow.loadURL('http://localhost:3142')
+
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

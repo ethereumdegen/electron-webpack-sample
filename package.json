@@ -1,22 +1,62 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "block-edit",
+  "version": "0.1.0",
+  "description": "A map editor for large voxel terrain with doodads.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "webpack": "webpack",
+    "app": "electron .",
+    "dev": "webpack-dev-server",
+    "electron-dev": "electron ./electron-dev"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "voxel",
+    "map",
+    "editor"
   ],
-  "author": "GitHub",
+  "author": "admazzola",
   "license": "CC0-1.0",
+  "dependencies": {
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fs": "0.0.1-security",
+    "html-loader": "^0.5.5",
+    "materialize-css": "^0.100.2",
+    "socket.io": "^2.1.1",
+    "vue": "^2.5.13"
+  },
   "devDependencies": {
-    "electron": "^2.0.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "browserify": "^15.2.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.9",
+    "electron": "2.0.3",
+    "electron-builder": "^20.19.1",
+    "file-loader": "^1.1.6",
+    "html-webpack-include-assets-plugin": "^1.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "mocha": "^5.2.0",
+    "node-loader": "^0.6.0",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
