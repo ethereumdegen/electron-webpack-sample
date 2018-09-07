@@ -1,7 +1,7 @@
 {
-  "name": "block-edit",
+  "name": "electron-webpack-sample",
   "version": "0.1.0",
-  "description": "A map editor for large voxel terrain with doodads.",
+  "description": "A starter pack for building desktop applications using HTML.",
   "main": "main.js",
   "scripts": {
     "webpack": "webpack",
